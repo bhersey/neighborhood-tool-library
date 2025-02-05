@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Tool Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neighborhood Tool Library</h1>
+        
+        <div class="form-section">
+            <h2>Add New Tool</h2>
+            <form id="addToolForm">
+                <input type="text" id="toolName" placeholder="Tool Name" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="text" id="category" placeholder="Category">
+                <button type="submit">Add Tool</button>
+            </form>
+        </div>
+
+        <div class="tools-section">
+            <h2>Available Tools</h2>
+            <div id="toolsList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
