@@ -1,6 +1,34 @@
-# Neighborhood Library Tool Management
+# Neighborhood Tool Library
 
-This project is a simple web application that serves as a neighborhood library for tools. It allows users to manage tools available for borrowing, including adding, updating, and deleting tool entries.
+A web application for managing a community tool-sharing library. Built with TypeScript, Express, MongoDB, and vanilla JavaScript.
+
+## Features
+
+- 🛠️ Tool Management
+  - Add new tools with name, description, and category
+  - View all available tools in a responsive grid layout
+  - Edit existing tool information
+  - Delete tools from the library
+- 💾 MongoDB Integration
+  - Secure database connection with authentication
+  - Structured data model for tools
+- 🎨 Modern UI
+  - Responsive design
+  - Interactive edit/delete functionality
+  - Clean and intuitive interface
+
+## Tech Stack
+
+- **Backend**
+  - Node.js with Express
+  - TypeScript
+  - MongoDB with Mongoose
+  - dotenv for configuration
+
+- **Frontend**
+  - Vanilla JavaScript
+  - CSS3 with Grid/Flexbox
+  - HTML5
 
 ## Project Structure
 

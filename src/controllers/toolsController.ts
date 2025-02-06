@@ -21,7 +21,7 @@ class ToolsController {
 
   async addTool(req: Request, res: Response): Promise<void> {
     const tool = req.body;
-    const newTool = await this.toolsService.addTool(tool);
+    const newTool = await this.toolsService.createTool(tool);
     res.status(201).json(newTool);
   }
 
