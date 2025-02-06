@@ -1,25 +1,25 @@
-import { Tool, ToolModel } from '../models/tool';
+import ToolModel, { ITool } from '../models/tool';
 
 class ToolsService {
-    async getAllTools(): Promise<Tool[]> {
-        return ToolModel.find().exec();
+    async getAllTools(): Promise<ITool[]> {
+        return await ToolModel.find();
     }
 
-    async addTool(tool: Tool): Promise<Tool> {
-        const newTool = new ToolModel(tool);
-        return newTool.save();
+    async getToolById(id: string): Promise<ITool | null> {
+        return await ToolModel.findById(id);
     }
 
-    async updateTool(id: string, tool: Partial<Tool>): Promise<Tool | null> {
-        return ToolModel.findByIdAndUpdate(id, tool, { new: true }).exec();
+    async createTool(toolData: Partial<ITool>): Promise<ITool> {
+        const tool = new ToolModel(toolData);
+        return await tool.save();
     }
 
-    async deleteTool(id: string): Promise<Tool | null> {
-        return ToolModel.findByIdAndDelete(id).exec();
+    async updateTool(id: string, toolData: Partial<ITool>): Promise<ITool | null> {
+        return await ToolModel.findByIdAndUpdate(id, toolData, { new: true });
     }
 
-    async getToolById(id: string): Promise<Tool | null> {
-        return ToolModel.findById(id).exec();
+    async deleteTool(id: string): Promise<ITool | null> {
+        return await ToolModel.findByIdAndDelete(id);
     }
 }
 
